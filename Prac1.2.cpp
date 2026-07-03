@@ -11,10 +11,11 @@ struct Student
 
 void newst(Student students[],int &count){
     if(count>=MAX){cout<<"maximum limit reached.\n";}
-    cout<<"Enterid:";
+    cout<<"Enter ID: ";
     cin>>students[count].id;
+    cout<<"Enter name: ";
     cin.getline(students[count].name,50);
-    cout<<"Enter age:";
+    cout<<"Enter age: ";
     cin>>students[count].age;
     count++;
     cout<<"Student created successfully.\n";
@@ -22,23 +23,23 @@ void newst(Student students[],int &count){
 
 void upst(Student students[],int count){
     int id;
-    cout<<"Enter id to update:";
+    cout<<"Enter id to update: ";
     cin>>id;
     for(int i=0;i<count;i++){
         if(students[i].id==id){
-            cout<<"Enter new name:";
+            cout<<"Enter new name: ";
             cin.getline(students[i].name,50);
-            cout<<"Enter new age:";
+            cout<<"Enter new age: ";
             cin>>students[i].age;
             cout<<"Studen update successfully.\n";
         }
     }
-    cout<<"Srudent not found.\n";
+    cout<<"Student not found.\n";
 }
 
 void delst(Student students[],int count){
     int id;
-    cout<<"Enter id to delete:";
+    cout<<"Enter id to delete: ";
     cin>>id;
     for(int i=0;i<count;i++){
         if(students[i].id==id){
@@ -49,13 +50,13 @@ void delst(Student students[],int count){
             cout<<"Student deleted.\n"; return;
         }
     }
-    cout<<"Srudent not found.\n";
+    cout<<"Student not found.\n";
 }
 
 void dis(Student students[],int count){
     cout<<"\n---Student list---\n";
     for(int i=0;i<count;i++){
-        cout<<"ID:"<<students[i].id<<"Name:"<<students[i].name<<"Age :"<<students[i].age<<endl;
+        cout<<"ID:"<<students[i].id<<"\nName:"<<students[i].name<<"\nAge :"<<students[i].age<<endl;
     }
     if(count==0){cout<<"No students to display.\n";}
 }
@@ -68,6 +69,7 @@ int main()
 
     do{
         cout<<"\n1.Create Student\n2.Update Student\n3.Delete Student\n4.Display students\n5.Exit\n";
+        cout<<"Enter your choice: ";
         cin>>choice;
 
         switch(choice){
