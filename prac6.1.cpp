@@ -22,7 +22,7 @@ class Poly{
     void create(int coff,int pow){
         Node* newNode=new Node(coff,pow);
         if(head==nullptr){
-            head=tail=nullptr;
+            head=tail=newNode;
         } else {
             tail->next=newNode;
             tail=newNode;
