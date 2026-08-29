@@ -1,15 +1,14 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
 int main() {
-    std::string name;
+    string name;
 
-    // Ask the user for their name
-    std::cout << "Enter your name: ";
-    std::cin >> name;
+    cout << "Enter your name: ";
+    cin >> name;
 
-    // Print a personalized greeting
-    std::cout << "Hello, " << name << "! Welcome to C++ programming." << std::endl;
+    cout << "Hello, " << name << "! Welcome to C++ programming." << std::endl;
 
     return 0;
 }
