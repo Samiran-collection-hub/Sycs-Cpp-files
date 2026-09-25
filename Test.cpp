@@ -9,6 +9,6 @@ int main() {
     cin >> name;
     cout << "Enter your age: " ;
     cin >> age;
-    cout << "Hello, " << name << "! " << "Age, " << age;
+    cout << "Hello, " << name << "! Age, " << age;
     return 0;
 }
